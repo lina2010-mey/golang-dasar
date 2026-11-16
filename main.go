@@ -3,7 +3,13 @@ package main
 import "fmt"
 
 func main() {
-    fmt.Println("Belajar Struktur Dasar Golang")
-    fmt.Println("Nama: Aris Meylina Putri")
-    fmt.Println("Saya sedang mempelajari bahasa pemrograman Go.")
+    var nama string = "Aris"
+    var umur int = 17
+    var nilai float64 = 85.5
+    var lulus bool = true
+
+    fmt.Println("Nama:", nama)
+    fmt.Println("Umur:", umur)
+    fmt.Println("Nilai:", nilai)
+    fmt.Println("Status Lulus:", lulus)
 }
