@@ -3,13 +3,14 @@ package main
 import "fmt"
 
 func main() {
-    var nama string = "Aris"
-    var umur int = 17
-    var nilai float64 = 85.5
-    var lulus bool = true
+    var bahasa string = "Golang"
+    var materi = "Variable"
+    tingkat := 1
 
-    fmt.Println("Nama:", nama)
-    fmt.Println("Umur:", umur)
-    fmt.Println("Nilai:", nilai)
-    fmt.Println("Status Lulus:", lulus)
+    fmt.Println("Bahasa:", bahasa)
+    fmt.Println("Materi:", materi)
+    fmt.Println("Tingkat:", tingkat)
+
+    tingkat = 2
+    fmt.Println("Tingkat setelah diubah:", tingkat)
 }
