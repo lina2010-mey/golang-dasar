@@ -3,29 +3,35 @@ package main
 import "fmt"
 
 func main() {
-	// Membuat slice
-	buah := []string{"Apel", "Mangga", "Jeruk"}
+	// Membuat map
+	nilai := map[string]int{
+		"Aris":   90,
+		"Desta":  85,
+		"Karina": 95,
+	}
 
-	fmt.Println("Daftar buah:", buah)
-	fmt.Println("Buah pertama:", buah[0])
+	fmt.Println("Data nilai:", nilai)
 
-	// Menambahkan data ke slice
-	buah = append(buah, "Pisang")
+	// Mengakses data map
+	fmt.Println("Nilai Aris:", nilai["Aris"])
 
-	fmt.Println("Setelah ditambahkan:", buah)
+	// Menambahkan data
+	nilai["Naufal"] = 88
 
-	// Mengakses slice
-	fmt.Println("Dua buah pertama:", buah[:2])
+	fmt.Println("Setelah ditambahkan:", nilai)
 
-	// Menghapus elemen dengan membuat slice baru
-	buah = append(buah[:1], buah[2:]...)
+	// Mengubah data
+	nilai["Aris"] = 100
 
-	fmt.Println("Setelah dihapus:", buah)
+	fmt.Println("Setelah diubah:", nilai)
 
-	// Slice angka
-	angka := []int{10, 20, 30, 40, 50}
+	// Menghapus data
+	delete(nilai, "Desta")
 
-	fmt.Println("Daftar angka:", angka)
-	fmt.Println("Panjang slice:", len(angka))
-	fmt.Println("Kapasitas slice:", cap(angka))
+	fmt.Println("Setelah dihapus:", nilai)
+
+	// Perulangan map
+	for nama, skor := range nilai {
+		fmt.Println(nama, ":", skor)
+	}
 }
