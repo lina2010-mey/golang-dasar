@@ -3,42 +3,24 @@ package main
 import "fmt"
 
 func main() {
-	// Percabangan if
-	nilai := 85
+	// Array
+	var buah [3]string
 
-	if nilai >= 75 {
-		fmt.Println("Lulus")
-	} else {
-		fmt.Println("Tidak Lulus")
-	}
+	buah[0] = "Apel"
+	buah[1] = "Mangga"
+	buah[2] = "Jeruk"
 
-	// Percabangan if else if
-	angka := 2
+	fmt.Println("Daftar buah:", buah)
 
-	if angka == 1 {
-		fmt.Println("Satu")
-	} else if angka == 2 {
-		fmt.Println("Dua")
-	} else {
-		fmt.Println("Angka lainnya")
-	}
+	// Array dengan inisialisasi langsung
+	angka := [5]int{10, 20, 30, 40, 50}
 
-	// Switch
-	hari := 3
+	fmt.Println("Daftar angka:", angka)
+	fmt.Println("Angka pertama:", angka[0])
+	fmt.Println("Angka terakhir:", angka[4])
 
-	switch hari {
-	case 1:
-		fmt.Println("Senin")
-	case 2:
-		fmt.Println("Selasa")
-	case 3:
-		fmt.Println("Rabu")
-	default:
-		fmt.Println("Hari lainnya")
-	}
-
-	// Perulangan for
-	for i := 1; i <= 5; i++ {
-		fmt.Println("Perulangan ke-", i)
+	// Mengakses array menggunakan perulangan
+	for i := 0; i < len(angka); i++ {
+		fmt.Println("Angka ke-", i, ":", angka[i])
 	}
 }
