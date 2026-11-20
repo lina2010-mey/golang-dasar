@@ -3,24 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	// Array
-	var buah [3]string
-
-	buah[0] = "Apel"
-	buah[1] = "Mangga"
-	buah[2] = "Jeruk"
+	// Membuat slice
+	buah := []string{"Apel", "Mangga", "Jeruk"}
 
 	fmt.Println("Daftar buah:", buah)
+	fmt.Println("Buah pertama:", buah[0])
 
-	// Array dengan inisialisasi langsung
-	angka := [5]int{10, 20, 30, 40, 50}
+	// Menambahkan data ke slice
+	buah = append(buah, "Pisang")
+
+	fmt.Println("Setelah ditambahkan:", buah)
+
+	// Mengakses slice
+	fmt.Println("Dua buah pertama:", buah[:2])
+
+	// Menghapus elemen dengan membuat slice baru
+	buah = append(buah[:1], buah[2:]...)
+
+	fmt.Println("Setelah dihapus:", buah)
+
+	// Slice angka
+	angka := []int{10, 20, 30, 40, 50}
 
 	fmt.Println("Daftar angka:", angka)
-	fmt.Println("Angka pertama:", angka[0])
-	fmt.Println("Angka terakhir:", angka[4])
-
-	// Mengakses array menggunakan perulangan
-	for i := 0; i < len(angka); i++ {
-		fmt.Println("Angka ke-", i, ":", angka[i])
-	}
+	fmt.Println("Panjang slice:", len(angka))
+	fmt.Println("Kapasitas slice:", cap(angka))
 }
