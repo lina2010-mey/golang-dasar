@@ -3,25 +3,42 @@ package main
 import "fmt"
 
 func main() {
-	// Operator Aritmatika
-	a := 10
-	b := 3
+	// Percabangan if
+	nilai := 85
 
-	fmt.Println("Penjumlahan:", a+b)
-	fmt.Println("Pengurangan:", a-b)
-	fmt.Println("Perkalian:", a*b)
-	fmt.Println("Pembagian:", a/b)
-	fmt.Println("Modulus:", a%b)
+	if nilai >= 75 {
+		fmt.Println("Lulus")
+	} else {
+		fmt.Println("Tidak Lulus")
+	}
 
-	// Operator Perbandingan
-	fmt.Println("Apakah a > b:", a > b)
-	fmt.Println("Apakah a == b:", a == b)
+	// Percabangan if else if
+	angka := 2
 
-	// Operator Logika
-	x := true
-	y := false
+	if angka == 1 {
+		fmt.Println("Satu")
+	} else if angka == 2 {
+		fmt.Println("Dua")
+	} else {
+		fmt.Println("Angka lainnya")
+	}
 
-	fmt.Println("AND:", x && y)
-	fmt.Println("OR:", x || y)
-	fmt.Println("NOT:", !x)
+	// Switch
+	hari := 3
+
+	switch hari {
+	case 1:
+		fmt.Println("Senin")
+	case 2:
+		fmt.Println("Selasa")
+	case 3:
+		fmt.Println("Rabu")
+	default:
+		fmt.Println("Hari lainnya")
+	}
+
+	// Perulangan for
+	for i := 1; i <= 5; i++ {
+		fmt.Println("Perulangan ke-", i)
+	}
 }
