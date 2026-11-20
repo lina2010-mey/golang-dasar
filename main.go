@@ -3,11 +3,25 @@ package main
 import "fmt"
 
 func main() {
-	const bahasa = "Golang"
-	const tahun = 2026
-	const pi = 3.14
+	// Operator Aritmatika
+	a := 10
+	b := 3
 
-	fmt.Println("Bahasa:", bahasa)
-	fmt.Println("Tahun:", tahun)
-	fmt.Println("Nilai Pi:", pi)
+	fmt.Println("Penjumlahan:", a+b)
+	fmt.Println("Pengurangan:", a-b)
+	fmt.Println("Perkalian:", a*b)
+	fmt.Println("Pembagian:", a/b)
+	fmt.Println("Modulus:", a%b)
+
+	// Operator Perbandingan
+	fmt.Println("Apakah a > b:", a > b)
+	fmt.Println("Apakah a == b:", a == b)
+
+	// Operator Logika
+	x := true
+	y := false
+
+	fmt.Println("AND:", x && y)
+	fmt.Println("OR:", x || y)
+	fmt.Println("NOT:", !x)
 }
